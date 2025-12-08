@@ -1,5 +1,7 @@
 # Habit Tracker
 
+I wanted to create something that is useful for me while having fun learning about new tech stacks and frameworks.
+
 A full-stack habit tracking application built with FastAPI and React.
 
 ## Project Structure
