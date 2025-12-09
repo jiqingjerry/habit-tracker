@@ -2,6 +2,40 @@
 
 All notable changes to the Habit Tracker project will be documented in this file.
 
+## [Unreleased] - 2025-12-09
+
+### Added
+- **Frontend Development**
+  - Created activity creation form with React hooks (`useState`)
+  - Implemented controlled form inputs for:
+    - Activity name (text input)
+    - Start time (datetime-local input)
+    - End time (datetime-local input)
+  - Added form submission handler with async/await
+  - Implemented API integration using `fetch()` to POST activities to backend
+  - Added automatic form clearing on successful submission
+  - Included error handling with try/catch for API requests
+
+- **Frontend Tooling**
+  - Configured Prettier for code formatting
+  - Integrated Prettier with ESLint for unified code quality
+  - Added npm scripts:
+    - `format`: Auto-format code with Prettier
+    - `format:check`: Check formatting without changes
+    - `lint:fix`: Auto-fix linting and formatting issues
+  - Created `.prettierrc` with configuration (no semicolons, single quotes, 2-space indentation)
+
+### Technical Decisions
+- **State Management**: Using React `useState` for form state management
+- **Datetime Handling**: Convert datetime-local format to ISO strings for API compatibility
+- **API Communication**: Direct `fetch()` calls (no external HTTP library needed for now)
+- **Code Quality**: ESLint + Prettier for consistent code style across the project
+
+### Testing
+- Successfully submitted activity from React form to FastAPI backend
+- Verified activity creation in database via frontend form
+- Confirmed CORS configuration working between frontend and backend
+
 ## [Unreleased] - 2025-12-08
 
 ### Added
