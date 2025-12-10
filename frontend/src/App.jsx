@@ -40,34 +40,48 @@ function App() {
   }
 
   return (
-    <div>
-      <h1>Habit Tracker</h1>
-      <form onSubmit={handleSubmit}>
+    <div className="max-w-md mx-auto bg-gray-700 rounded-lg shadow-md p-6">
+      <h1 className="text-2xl font-bold mb-6 text-gray-200">Habit Tracker</h1>
+      <form onSubmit={handleSubmit} className="space-y-4">
         <div>
-          <label>Activity name</label>
+          <label className="block text-sm font-medium text-gray-200 mb-2">
+            Activity name
+          </label>
           <input
             type="text"
             value={activityName}
             onChange={(e) => setActivityName(e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div>
-          <label>Start Time</label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            Start Time
+          </label>
           <input
             type="datetime-local"
             value={startTime}
             onChange={(e) => setStartTime(e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
         <div>
-          <label>End Time</label>
+          <label className="block text-sm font-medium text-gray-700 mb-2">
+            End Time
+          </label>
           <input
             type="datetime-local"
             value={endTime}
             onChange={(e) => setEndTime(e.target.value)}
+            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        <button type="submit">Submit</button>
+        <button
+          type="submit"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-md transition-colors"
+        >
+          Submit
+        </button>
       </form>
     </div>
   )
